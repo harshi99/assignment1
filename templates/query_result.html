@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SQL Query Results</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+        .picture {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>SQL Query Results</h1>
+    <table>
+        <tr>
+            {% for column in result[0].keys() %}
+                <th>{{ column }}</th>
+            {% endfor %}
+        </tr>
+        {% for row in result %}
+            <tr>
+                {% for key, value in row.items() %}
+                    {% if key == 'picture' %}
+                        <td><img src="{{ value }}" class="picture"></td>
+                    {% else %}
+                        <td>{{ value }}</td>
+                    {% endif %}
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

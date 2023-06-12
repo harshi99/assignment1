@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload File and Run SQL Query</title>
+</head>
+<body>
+    <h1>Upload File</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".csv">
+        <input type="submit" value="Upload">
+    </form>
+    
+    <h1>Execute SQL Query</h1>
+    <form action="/sql" method="post">
+        <textarea name="query" rows="5" cols="50"></textarea><br>
+        <input type="submit" value="Execute">
+    </form>
+</body>
+</html>
