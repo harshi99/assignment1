@@ -14,11 +14,11 @@ blob_service_client = BlobServiceClient.from_connection_string(blob_connection_s
 container_name = 'assdata1-1'
 
 # SQL configuration
-server = os.environ.get('server')
-database = os.environ.get('database)
-username = os.environ.get('username')
-password = os.environ.get('password')
-driver = os.environ.get('driver')
+server = os.environ.get('SERVER')
+database = os.environ.get('DATABASE)
+username = os.environ.get('NAME')
+password = os.environ.get('PASSWORD')
+driver = os.environ.get('DRIVER')
 
 # Function to execute SQL query
 def execute_sql_query(query):
