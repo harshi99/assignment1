@@ -83,4 +83,5 @@ def execute_query():
 if __name__ == '__main__':
     os.makedirs('uploads', exist_ok=True)  # Create the "uploads" directory if it doesn't exist
     port = os.environ.get('PORT', 5000)
-    app.run(debug=True, port=port)
+    app.run(debug=True)
+    app.run(host='localhost', port=port)
