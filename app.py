@@ -15,7 +15,7 @@ container_name = 'assdata1-1'
 
 # SQL configuration
 server = os.environ.get('SERVER')
-database = os.environ.get('DATABASE)
+database = os.environ.get('DATABASE')
 username = os.environ.get('NAME')
 password = os.environ.get('PASSWORD')
 driver = os.environ.get('DRIVER')
