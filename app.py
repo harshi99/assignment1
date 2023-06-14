@@ -19,11 +19,11 @@ blob_service_client = BlobServiceClient.from_connection_string(blob_connection_s
 container_name = 'assdata1-1'
 
 # SQL configuration
-server = os.environ.get('SERVER')
-database = os.environ.get('DATABASE')
-username = os.environ.get('NAME')
-password = os.environ.get('PASSWORD')
-driver = os.environ.get('DRIVER')
+server = 'harshi1.database.windows.net'
+database = 'assdata1'
+username = 'harshi'
+password = 'Azure.123'
+driver = '{ODBC Driver 18 for SQL Server};Server=tcp:harshi1.database.windows.net,1433;Database=assdata1;Uid=harshi;Pwd=Azure.123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
 
 # Function to execute SQL query
 def execute_sql_query(query):
