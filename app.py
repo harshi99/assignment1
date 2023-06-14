@@ -14,16 +14,16 @@ from datetime import datetime
 app = Flask(__name__)
 
 # Blob Storage configuration
-blob_connection_string = 'DefaultEndpointsProtocol=https;AccountName=assdata1;AccountKey=WMGVFc5Btn/cWP1ErRdsoFKp+VOWcfM9r5C6uOYSod9jeunIxoThQp+A6ecG6R48CFywsaCRl/AZ+ASttwd/CA==;EndpointSuffix=core.windows.net'
+blob_connection_string = os.environ.get('BLOB_CONNECTION_STRING')
 blob_service_client = BlobServiceClient.from_connection_string(blob_connection_string)
 container_name = 'assdata1-1'
 
 # SQL configuration
-server = 'harshi1.database.windows.net'
-database = 'assdata1'
-username = 'harshi'
-password = 'Azure.123'
-driver = '{ODBC Driver 18 for SQL Server};Server=tcp:harshi1.database.windows.net,1433;Database=assdata1;Uid=harshi;Pwd=Azure.123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
+server = os.environ.get('SERVER')
+database = os.environ.get('DATABASE')
+username = os.environ.get('NAME')
+password = os.environ.get('PASSWORD')
+driver = os.environ.get('DRIVER')
 
 # Function to execute SQL query
 def execute_sql_query(query):
