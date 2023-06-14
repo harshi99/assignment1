@@ -1,3 +1,8 @@
+"""
+Name: Harshitha gokanakonda
+course: 6332 Cloud Computing and Big Data
+Assignment Number: 02
+"""
 from flask import Flask, render_template, request
 from azure.storage.blob import BlobServiceClient
 from azure.identity import DefaultAzureCredential
